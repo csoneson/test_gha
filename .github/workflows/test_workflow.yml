@@ -22,8 +22,9 @@ jobs:
       
       - name: Install Conda environment
         uses: mamba-org/provision-with-micromamba@main
-        channels: 'bioconda,conda-forge,defaults'
-        extra-specs: snakemake=6.10.0
+        with:
+          channels: bioconda,conda-forge,defaults
+          extra-specs: snakemake=6.10.0
         
 #      - name: Set up conda
 #        uses: s-weigand/setup-conda@v1.1.1
